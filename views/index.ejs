@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Genshin Impact Damage Calculator</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+   </head>
+   <body>
+       <section class="section">
+           <div class="container">
+                <h1 class="title"> Check Website's Response </h1>
+                <form action="/" method="post">
+                    <input class="input is-link" type="text" name="website" placeholder="Website" required>
+                    <button type="submit" class="button is-fullwidth"> Check Response </button>
+                </form>
+                <% if (data && data.error) { %>
+                    <div class="notification is-danger">
+                        <button class="delete" onclick="" ></button>
+                            <%= data.error %>
+                    </div>
+                <% } %>
+                    <% if (data && data.success) { %> 
+                        <div class="notification is-success">
+                            <button class="delete" onclick="" ></button>
+                            <%= data.success %>
+                        </div>
+                <% } %> 
+           </div>
+       </section>
+   </body>
+</html>
